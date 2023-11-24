@@ -1,6 +1,7 @@
 # Logs
 logs
-
+debug.log
+.gitignore
 
 node_modules
 
