@@ -1,4 +1,5 @@
 module.exports = {
+  distDir: 'dist',
   root: true,
   env: { browser: true, es2020: true },
   extends: [
