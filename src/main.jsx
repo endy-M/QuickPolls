@@ -6,6 +6,9 @@ import Poll from './Poll';
 import './custom.scss';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
+
+if (process.env.NODE_ENV === 'production') disableReactDevTools();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

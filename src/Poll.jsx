@@ -53,7 +53,7 @@ function Poll() {
 
   const fetchData = async () => {
     try {
-      const response = await Axios.get(`http://localhost:3001/getPolls/${id}`);
+      const response = await Axios.get(`http://quickpolls-api.onrender.com/getPolls/${id}`);
       console.log('Fetched data:', response.data);
       setPollres(response.data);
       setLoading(false); // Set loading to false once data is fetched
@@ -98,7 +98,7 @@ function Poll() {
       selectedOptions: selectedOptions,
     };
 
-    Axios.post('http://localhost:3001/submitPoll', updatedPoll)
+    Axios.post('https://quickpolls-api.onrender.com/submitPoll', updatedPoll)
       .then((response) => {
         toast.success('Poll submitted successfully!');
         setSubmitted(true);
@@ -140,7 +140,7 @@ function Poll() {
           style={{ fontSize: '1.3rem', fontWeight: 'bold', padding: '1rem' }}
         >
           <a
-            href='http://localhost:5173'
+            href='https://quickpolls.onrender.com'
             className='link-light link-underline-opacity-0'
           >
             Home/Create Poll

@@ -50,7 +50,7 @@ function App() {
   // State for showing copy link
   const [finished, setFinished] = useState(false);
   
-  let link = `http://localhost:5173/poll/${dbId}`;
+  let link = `http://quickpolls.onrender.com/poll/${dbId}`;
 
   // Functions for handling adding and removing questions and options actions
   const handleRemoveQuestion = (idQ) => {
@@ -155,7 +155,7 @@ function App() {
       options: options[i].map((option) => ({ content: option, votes: 0 })),
     }));
   
-    axios.post("http://localhost:3001/createPoll", {
+    axios.post("https://quickpolls-api.onrender.com/createPoll", {
       pollid: dbId.toString(),
       questions: formattedQuestions,
     }).then((response) => {
