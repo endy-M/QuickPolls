@@ -50,7 +50,7 @@ function App() {
   // State for showing copy link
   const [finished, setFinished] = useState(false);
   
-  let link = `http://quickpolls.onrender.com/poll/${dbId}`;
+  let link = `https://quickpolls-mkzv.onrender.com/poll/${dbId}`;
 
   // Functions for handling adding and removing questions and options actions
   const handleRemoveQuestion = (idQ) => {
