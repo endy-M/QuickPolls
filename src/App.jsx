@@ -164,7 +164,7 @@ function App() {
   };  
 
   return (
-    <div className='App' style={{ backgroundColor: "#0C2D48", minHeight: "100vh", height: "100vh", minWidth: "100vw", width: "100vw", margin: "0px", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+    <div className='App' style={{ backgroundColor: "#0C2D48", minWidth: "100%", width: "100%", margin: "0px", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
       {/* Logo */}
       <img
         src={img}
