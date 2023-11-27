@@ -125,19 +125,18 @@ function Poll() {
   };
 
   return (
-    <div className='App' style={{ boxSizing: "border-box", backgroundColor: "#0C2D48", maxWidth: "100%", width: "100%", margin: "0px", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+    <div className='App'>
       {/* Logo */}
       <img
+        className='logo'
         src={img}
-        style={{ width: '15rem', margin: 'auto', marginTop: '4rem' }}
         alt='Quick Polls logo'
       />
 
-      <div style={{ margin: 'auto', marginTop: '5rem' }}>
+      <div className='home-button-div'>
         <button
           type='button'
-          className='btn btn-primary'
-          style={{ fontSize: '1.3rem', fontWeight: 'bold', padding: '1rem' }}
+          className='btn-home btn btn-primary'
         >
           <a
             href='https://quickpolls-mkzv.onrender.com'
@@ -150,14 +149,7 @@ function Poll() {
 
       {/* Main part */}
       <div
-        className='card bg-primary'
-        style={{
-          width: '45%',
-          minHeight: '5rem',
-          margin: 'auto',
-          marginTop: '4rem',
-          marginBottom: '10.8rem',
-        }}
+        className='main-card-poll card bg-primary'
       >
         {loading ? (
           <div>Loading...</div>
@@ -176,12 +168,7 @@ function Poll() {
             <div style={{ margin: 'auto', marginTop: '1.5rem', marginBottom: '2rem' }}>
               <button
                 onClick={handleBackToVoting}
-                className='btn btn-dark'
-                style={{
-                  fontSize: '1.1rem',
-                  fontWeight: 'bold',
-                  padding: '1rem',
-                }}
+                className='btn-back-to-voting btn btn-dark'
               >
                 Back to Voting
               </button>
@@ -192,11 +179,7 @@ function Poll() {
             {pollres?.questions?.map((question, i) => (
               <div key={pollres._id + i}>
                 <h2
-                  style={{
-                    marginTop: '2rem',
-                    textAlign: 'center',
-                    fontWeight: 'bold',
-                  }}
+                  className='question-header'
                 >
                   {question.content}
                 </h2>
@@ -204,11 +187,7 @@ function Poll() {
                   {question.options.map((option, index) => (
                     <li
                       key={index + i}
-                      className='list-group-item'
-                      style={{
-                        backgroundColor: '#76aece',
-                        fontSize: '1.1rem',
-                      }}
+                      className='option-item list-group-item'
                       onClick={() => handleOptionSelect(i, index)}
                     >
                       <input
@@ -229,24 +208,14 @@ function Poll() {
               </div>
             ))}
             <div
-              style={{
-                margin: 'auto',
-                marginTop: '1.5rem',
-                marginBottom: '2rem',
-                display: 'flex',
-              }}
+              className='div-submit'
             >
               {submitted ? (
                 <button
                   disabled
+                  className='btn-submit btn btn-dark'
                   onClick={handleSubmit}
                   type='button'
-                  className='btn btn-dark'
-                  style={{
-                    fontSize: '1.1rem',
-                    fontWeight: 'bold',
-                    padding: '1rem',
-                  }}
                 >
                   Submit
                 </button>
@@ -254,11 +223,6 @@ function Poll() {
                 <button
                   onClick={handleSubmit}
                   className='btn btn-dark'
-                  style={{
-                    fontSize: '1.1rem',
-                    fontWeight: 'bold',
-                    padding: '1rem',
-                  }}
                 >
                   Submit
                 </button>
@@ -266,13 +230,7 @@ function Poll() {
 
               <button
                 onClick={handleViewResults}
-                className='btn btn-dark'
-                style={{
-                  fontSize: '1.1rem',
-                  fontWeight: 'bold',
-                  padding: '1rem',
-                  marginLeft: '2rem',
-                }}
+                className='btn-view-results btn btn-dark'
               >
                 View Results
               </button>
@@ -282,14 +240,7 @@ function Poll() {
       </div>
 
       <div
-        className='bg-primary'
-        style={{
-          textAlign: 'center',
-          fontSize: '1.05rem',
-          padding: '0.3rem',
-          display: 'flex',
-          flexDirection: 'column-reverse',
-        }}
+        className='footer bg-primary'
       >
         © 2023 Copyright: QuickPolls. All rights reserved
       </div>

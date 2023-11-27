@@ -164,11 +164,11 @@ function App() {
   };  
 
   return (
-    <div className='App' style={{ boxSizing: "border-box", backgroundColor: "#0C2D48", maxWidth: "100%", width: "100%", margin: "0px", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+    <div className='App'>
       {/* Logo */}
       <img
+        className='logo'
         src={img}
-        style={{width: "15rem", margin: "auto", marginTop: "3rem"}}
         alt='Quick Polls logo'
       />
 
@@ -185,8 +185,7 @@ function App() {
 
       {/* Main part */}
       <div
-        className='card bg-primary'
-        style={{width: "45%", margin: "auto", marginTop: "4.1rem", marginBottom: "6rem"}}
+        className='main-card card bg-primary'
       >
 
         {/* Loading questions from state array */}
@@ -213,19 +212,17 @@ function App() {
         {btnAddQuestionDisabled ?
           <button
             disabled
+            className='btn-add-question btn btn-dark'
             onClick={handleAddQuestion}
             type='button'
-            className='btn btn-dark'
-            style={{width: '80%', margin: 'auto', marginTop: '1rem', marginBottom: '2rem'}}
           >
             Add Question
           </button>
           :
           <button
+            className='btn-add-question btn btn-dark'
             onClick={handleAddQuestion}
             type='button'
-            className='btn btn-dark'
-            style={{width: '80%', margin: 'auto', marginTop: '1rem', marginBottom: '2rem'}}
           >
             Add Question
           </button>
@@ -243,37 +240,21 @@ function App() {
         {finished ?
           <button
             disabled
+            className='btn-finish btn btn-dark'
             onClick={() => {
               finishPoll();
             }}
             type='button'
-            className='btn btn-dark'
-            style={{
-              width: '90%',
-              margin: 'auto',
-              marginTop: '1rem',
-              marginBottom: '2rem',
-              fontWeight: 'bold',
-              fontSize: '1.2rem'
-            }}
           >
             Finish Poll
           </button>
         :
           <button
+            className='btn-finish btn btn-dark'
             onClick={() => {
               finishPoll();
             }}
             type='button'
-            className='btn btn-dark'
-            style={{
-              width: '90%',
-              margin: 'auto',
-              marginTop: '1rem',
-              marginBottom: '2rem',
-              fontWeight: 'bold',
-              fontSize: '1.2rem'
-            }}
           >
             Finish Poll
           </button>
@@ -282,9 +263,9 @@ function App() {
 
         {/* Container with link active when poll is finished */}
         {finished ?
-          <div className='card bg-secondary' style={{ width: "85%", margin: "auto", marginTop: "1rem", marginBottom: "2rem", padding: '1rem', fontSize: '1.1rem' }}>
+          <div className='card-finish-link card bg-secondary'>
           <a className='link-dark' href={link} style={{ margin: 'auto' }}>{link}</a>
-          <button onClick={() => copyToClipboard()} style={{ width: '6rem', margin: 'auto', marginTop: '1rem' }} type='button' className='btn btn-dark'>Copy</button>
+          <button className='btn-copy-link btn btn-dark' onClick={() => copyToClipboard()} type='button'>Copy</button>
         </div>
         :
           <></>
@@ -293,9 +274,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <div className='bg-primary' style={{textAlign: 'center', fontSize: '1.05rem',
-        padding: '0.3rem', display: 'flex', flexDirection: 'column-reverse'}}
-      >© 2023 Copyright: QuickPolls. All rights reserved</div>
+      <div className='footer bg-primary'>© 2023 Copyright: QuickPolls. All rights reserved</div>
     </div>
   );
 }

@@ -1,0 +1,118 @@
+.App {
+    box-sizing: border-box;
+    background-color: #0C2D48;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo {
+    width: 15%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.home-button-div {
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.btn-home {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.main-card {
+    width: 45%;
+    margin: auto;
+    margin-top: 4.1rem;
+    margin-bottom: 6rem;
+}
+
+.main-card-poll {
+    width: 45%;
+    min-height: 5rem;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 10.8rem;
+}
+
+.btn-add-question {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-finish {
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-finish-link {
+    width: 85%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.btn-copy-link {
+    width: 6rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.btn-back-to-voting {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.question-header {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.option-item {
+    background-color: #76aece;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.div-submit {
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.btn-submit {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.btn-view-results {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-left: 2rem;
+}
