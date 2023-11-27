@@ -15,7 +15,7 @@ const Option = ({ id, displayNumber,content, deleteOptionFunction, deleteOptionD
                 className={`form-control bg-secondary text-black ${invalidOptions[displayNumber - 1]?.includes(id) ? 'error' : ''}`}
                 type="text"
                 placeholder={`Option ${id + 1}`}
-                style={{ width: '50%', marginLeft: '3rem', marginBottom: '0.5rem', fontWeight: 'normal', ...(invalidOptions[displayNumber - 1]?.includes(id) ? errorStyle : {}) }}
+                style={{ width: '50%', marginLeft: '3rem', marginBottom: '0.5rem', fontWeight: '500', ...(invalidOptions[displayNumber - 1]?.includes(id) ? errorStyle : {}) }}
                 value={content || ''}
                 onChange={handleInputChange}
             />
