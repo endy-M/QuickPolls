@@ -186,7 +186,7 @@ function App() {
       {/* Main part */}
       <div
         className='card bg-primary'
-        style={{width: "45rem", margin: "auto", marginTop: "4.1rem", marginBottom: "6rem"}}
+        style={{width: "45%", margin: "auto", marginTop: "4.1rem", marginBottom: "6rem"}}
       >
 
         {/* Loading questions from state array */}

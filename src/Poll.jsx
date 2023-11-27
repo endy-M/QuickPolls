@@ -152,7 +152,7 @@ function Poll() {
       <div
         className='card bg-primary'
         style={{
-          width: '45rem',
+          width: '45%',
           minHeight: '5rem',
           margin: 'auto',
           marginTop: '4rem',
