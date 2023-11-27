@@ -164,7 +164,7 @@ function App() {
   };  
 
   return (
-    <div className='App'>
+    <div className='container App'>
       {/* Logo */}
       <img
         className='logo'
