@@ -164,7 +164,7 @@ function App() {
   };  
 
   return (
-    <div className='container App'>
+    <div className='container-fluid App'>
       {/* Logo */}
       <img
         className='logo'
