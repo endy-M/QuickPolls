@@ -125,7 +125,7 @@ function Poll() {
   };
 
   return (
-    <div className='container-fluid App'>
+    <div className='container-fluid d-flex App'>
       {/* Logo */}
       <img
         className='logo'
@@ -148,9 +148,7 @@ function Poll() {
       </div>
 
       {/* Main part */}
-      <div
-        className='main-card-poll card bg-primary'
-      >
+      <div className='main-card-poll card bg-primary flex-fill'>
         {loading ? (
           <div>Loading...</div>
         ) : viewResults ? (

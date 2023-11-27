@@ -164,7 +164,7 @@ function App() {
   };  
 
   return (
-    <div className='container-fluid App'>
+    <div className='container-fluid d-flex App'>
       {/* Logo */}
       <img
         className='logo'
@@ -184,9 +184,7 @@ function App() {
       )}
 
       {/* Main part */}
-      <div
-        className='main-card card bg-primary'
-      >
+      <div className='main-card card bg-primary flex-fill'>
 
         {/* Loading questions from state array */}
         {questions.map((question, i) => (
