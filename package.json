@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "proxy": "http://localhost:3001",
+  "proxy": "https://quickpolls-api.onrender.com",
   "scripts": {
     "dev": "vite",
     "test": "jest",
