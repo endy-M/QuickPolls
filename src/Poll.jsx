@@ -125,7 +125,7 @@ function Poll() {
   };
 
   return (
-    <div className='App bg-dark' style={{ display: 'grid' }}>
+    <div className='App bg-dark' style={{ display: 'grid', height: "100%" }}>
       {/* Logo */}
       <img
         src={img}
