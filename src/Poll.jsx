@@ -125,7 +125,7 @@ function Poll() {
   };
 
   return (
-    <div className='App' style={{ backgroundColor: "#0C2D48", minWidth: "100%", width: "100%", margin: "0px", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
+    <div className='App' style={{ backgroundColor: "#0C2D48", maxWidth: "100%", width: "100%", margin: "0px", backgroundAttachment: "fixed", backgroundSize: "cover" }}>
       {/* Logo */}
       <img
         src={img}
