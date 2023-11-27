@@ -5,6 +5,9 @@ body {
     margin: 0;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .logo {
