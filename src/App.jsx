@@ -127,7 +127,7 @@ function App() {
   }, [questions.length, options]);
 
   const copyToClipboard = () => {
-    let isCopy = copy(link);
+    let isCopy = copy(copyLink);
     if (isCopy) {
       toast.success("Copied to Clipboard");
     }

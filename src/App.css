@@ -76,12 +76,12 @@ body {
 }
 
 .footer {
+    max-width: 100%;
     text-align: center;
     font-size: 1.05rem;
     padding: 0.3rem;
     display: flex;
     flex-direction: column-reverse;
-    flex-grow: 1;
 }
 
 .btn-back-to-voting {
