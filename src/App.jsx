@@ -49,8 +49,8 @@ function App() {
 
   // State for showing copy link
   const [finished, setFinished] = useState(false);
-  
-  const link = `https://quickpolls-mkzv.onrender.com/poll/${dbId}`;
+
+  const copyLink = `https://quickpolls-mkzv.onrender.com/poll/${dbId}`;
 
   // Functions for handling adding and removing questions and options actions
   const handleRemoveQuestion = (idQ) => {
@@ -262,7 +262,7 @@ function App() {
         {/* Container with link active when poll is finished */}
         {finished ?
           <div className='card-finish-link card bg-secondary'>
-          <a className='link-dark' href={link} style={{ margin: 'auto' }}>{link}</a>
+          <a className='link-dark' href={copyLink} style={{ margin: 'auto' }}>{copyLink}</a>
           <button className='btn-copy-link btn btn-dark' onClick={() => copyToClipboard()} type='button'>Copy</button>
         </div>
         :
