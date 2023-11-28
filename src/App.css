@@ -37,7 +37,7 @@ body {
 }
 
 .main-card-poll {
-    width: 45%;
+    width: 75%;
     min-height: 5rem;
     margin: auto;
     margin-top: 4rem;
@@ -81,6 +81,7 @@ body {
     padding: 0.3rem;
     display: flex;
     flex-direction: column-reverse;
+    flex-grow: 1;
 }
 
 .btn-back-to-voting {

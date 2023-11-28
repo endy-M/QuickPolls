@@ -53,7 +53,7 @@ function Poll() {
 
   const fetchData = async () => {
     try {
-      const response = await Axios.get(`http://quickpolls-api.onrender.com/getPolls/${id}`);
+      const response = await Axios.get(`https://quickpolls-api.onrender.com/getPolls/${id}`);
       console.log('Fetched data:', response.data);
       setPollres(response.data);
       setLoading(false); // Set loading to false once data is fetched
