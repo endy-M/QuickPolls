@@ -50,7 +50,7 @@ function App() {
   // State for showing copy link
   const [finished, setFinished] = useState(false);
 
-  const copyLink = `https://${window.location.hostname}/poll/${dbId}`;
+  const copyLink = `https://${window.location.hostname}-mkzv/poll/${dbId}`;
 
   // Functions for handling adding and removing questions and options actions
   const handleRemoveQuestion = (idQ) => {
