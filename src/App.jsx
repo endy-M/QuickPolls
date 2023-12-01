@@ -52,6 +52,8 @@ function App() {
 
   const copyLink = `https://quickpolls-mkzv.onrender.com/poll/${dbId}`;
 
+  console.log(copyLink);
+
   // Functions for handling adding and removing questions and options actions
   const handleRemoveQuestion = (idQ) => {
     if (questions.length > 1) {
