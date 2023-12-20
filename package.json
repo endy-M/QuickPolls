@@ -16,6 +16,7 @@
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "copy-to-clipboard": "^3.3.3",
+    "dotenv": "^16.3.1",
     "formik": "^2.4.5",
     "jest": "^29.7.0",
     "lodash.debounce": "^4.0.8",

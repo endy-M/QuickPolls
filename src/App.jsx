@@ -50,7 +50,7 @@ function App() {
   // State for showing copy link
   const [finished, setFinished] = useState(false);
 
-  const copyLink = `https://quickpolls-mkzv.onrender.com/poll/${dbId}`;
+  const copyLink = `http://localhost:5173/poll/${dbId}`;
 
   console.log(copyLink);
 
@@ -157,7 +157,7 @@ function App() {
       options: options[i].map((option) => ({ content: option, votes: 0 })),
     }));
   
-    axios.post("https://quickpolls-api.onrender.com/createPoll", {
+    axios.post(`http://localhost:443/createPoll`, {
       pollid: dbId.toString(),
       questions: formattedQuestions,
     }).then((response) => {
@@ -166,7 +166,7 @@ function App() {
   };  
 
   return (
-    <div className='container-fluid d-flex App'>
+    <div className='App'>
       {/* Logo */}
       <img
         className='logo'
@@ -186,7 +186,7 @@ function App() {
       )}
 
       {/* Main part */}
-      <div className='main-card card bg-primary flex-fill'>
+      <div className='main-card card bg-primary'>
 
         {/* Loading questions from state array */}
         {questions.map((question, i) => (

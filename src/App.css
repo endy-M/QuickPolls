@@ -1,18 +1,15 @@
 body {
-    width: 100vw;
-    box-sizing: border-box;
     background-color: #0C2D48;
     margin: 0;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+}
+
+.App {
+    background-color: #0C2D48;
 }
 
 .logo {
     width: 15%;
-    margin: auto;
+    margin-left: 42.5%;
     margin-top: 3rem;
 }
 
@@ -22,13 +19,17 @@ body {
 }
 
 .btn-home {
-    font-size: 1.3rem;
-    font-weight: bold;
+    margin-left: 43%;
+}
+
+.btn-home a {
     padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .main-card {
-    width: 75%;
+    width: 55%;
     max-width: 90%;
     margin: auto;
     margin-top: 4.1rem;
@@ -38,10 +39,9 @@ body {
 .main-card-poll {
     width: 75%;
     max-width: 90%;
-    min-height: 50vh;
     margin: auto;
-    margin-top: 4rem;
-    margin-bottom: 10.8rem;
+    margin-top: 5rem;
+    margin-bottom: 11.3rem;
 }
 
 .btn-add-question {
@@ -111,7 +111,7 @@ body {
 }
 
 .btn-submit {
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: bold;
     padding: 1rem;
 }

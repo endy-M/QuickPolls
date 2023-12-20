@@ -19,7 +19,7 @@ const Result = ({ question, totalVotes, selectedOptions }) => {
       >
         {question.content}
       </h2>
-      <ul className='list-group' style={{ margin: '2rem' }}>
+      <ul className='list-group' style={{ margin: '2rem', marginLeft: "10%", marginRight: "10%" }}>
         {question.options.map((option, index) => (
           <li
             key={index}
@@ -53,7 +53,7 @@ function Poll() {
 
   const fetchData = async () => {
     try {
-      const response = await Axios.get(`https://quickpolls-api.onrender.com/getPolls/${id}`);
+      const response = await Axios.get(`http://localhost:443/getPolls/${id}`);
       console.log('Fetched data:', response.data);
       setPollres(response.data);
       setLoading(false); // Set loading to false once data is fetched
@@ -98,7 +98,7 @@ function Poll() {
       selectedOptions: selectedOptions,
     };
 
-    Axios.post('https://quickpolls-api.onrender.com/submitPoll', updatedPoll)
+    Axios.post(`http://localhost:443/submitPoll`, updatedPoll)
       .then((response) => {
         toast.success('Poll submitted successfully!');
         setSubmitted(true);
@@ -125,7 +125,7 @@ function Poll() {
   };
 
   return (
-    <div className='container-fluid d-flex App'>
+    <div className='App'>
       {/* Logo */}
       <img
         className='logo'
@@ -139,7 +139,7 @@ function Poll() {
           className='btn-home btn btn-primary'
         >
           <a
-            href='https://quickpolls-mkzv.onrender.com'
+            href="http://localhost:5173"
             className='link-light link-underline-opacity-0'
           >
             Home/Create Poll
@@ -148,7 +148,7 @@ function Poll() {
       </div>
 
       {/* Main part */}
-      <div className='main-card-poll card bg-primary flex-fill'>
+      <div className='main-card-poll card bg-primary'>
         {loading ? (
           <div>Loading...</div>
         ) : viewResults ? (
@@ -163,10 +163,11 @@ function Poll() {
                 />
               </div>
             ))}
-            <div style={{ margin: 'auto', marginTop: '1.5rem', marginBottom: '2rem' }}>
+            <div style={{ width: "20%", marginLeft: '44%', marginTop: '2.5rem', marginBottom: '2rem' }}>
               <button
                 onClick={handleBackToVoting}
                 className='btn-back-to-voting btn btn-dark'
+                style={{ fontSize: "1.4rem", fontWeight: "bold" }}
               >
                 Back to Voting
               </button>
@@ -181,15 +182,16 @@ function Poll() {
                 >
                   {question.content}
                 </h2>
-                <ul className='list-group' style={{ margin: '2rem' }}>
+                <ul className='list-group' style={{ margin: '2rem', marginLeft: "10%", marginRight: "10%" }}>
                   {question.options.map((option, index) => (
                     <li
                       key={index + i}
                       className='option-item list-group-item'
                       onClick={() => handleOptionSelect(i, index)}
+                      style={{ backgroundColor: "#76aece" }}
                     >
                       <input
-                        className='form-check-input list-group-item-light me-2'
+                        className='form-check-input list-group-item-dark me-2'
                         name={`listGroupRadio${i}`}
                         id={`${i}-${index}`}
                         type='radio'
@@ -214,13 +216,16 @@ function Poll() {
                   className='btn-submit btn btn-dark'
                   onClick={handleSubmit}
                   type='button'
+                  style={{ fontSize: "1.4rem", fontWeight: "bold" }}
                 >
                   Submit
                 </button>
               ) : (
                 <button
+                  className='btn-submit btn btn-dark'
                   onClick={handleSubmit}
-                  className='btn btn-dark'
+                  type='button'
+                  style={{ fontSize: "1.4rem", fontWeight: "bold" }}
                 >
                   Submit
                 </button>
@@ -229,6 +234,7 @@ function Poll() {
               <button
                 onClick={handleViewResults}
                 className='btn-view-results btn btn-dark'
+                style={{ fontSize: "1.4rem", fontWeight: "bold" }}
               >
                 View Results
               </button>
